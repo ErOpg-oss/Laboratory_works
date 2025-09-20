@@ -7,13 +7,17 @@ int main() {
 
     std::cout << "Введите количество остановок: ";
     std::cin >> stops;
-
-    for (int i = 1; i <= stops; ++i) 
+    if (stops >= 0)
     {
-        total += cost;
+        for (int i = 1; i <= stops; ++i) 
+        {
+            total += cost;
+        }
+        std::cout << "Общая стоимость проезда: " << total << " рублей." << std::endl;
     }
-
-    std::cout << "Общая стоимость проезда: " << total << " рублей." << std::endl;
+    else{
+        std::cout<<"Число остановок отрицательное"<<std::endl;
+    }
 
     return 0;
 }
